@@ -1,0 +1,43 @@
+<div class="container my-4">
+    <h1 class="app">To Do List</h1>
+    <form >
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" [(ngModel)]= "todoObj.Title"  name="Title" placeholder="Enter Title" >
+          
+        </div>
+        
+        <div class="mb-3 ">
+            <label for="description" class="form-label">Enter Description : </label>
+            <textarea class="form-control" [(ngModel)]= "todoObj.Description" name="description" rows="3"></textarea>
+        </div>
+           <div class= "dates">
+            <label for="status" class="form-label">StartDate</label>
+            <input type="date" class="form-control" [(ngModel)] = "todoObj.Startdate" name="startDate" >
+            <br><br>
+            <input type="date" class="form-control" [(ngModel)] = "todoObj.Enddate" name="endDate" >
+            
+           </div>   
+          
+           <div class="status form-group">
+            <label for="status">Seleact Status : </label>
+            <select class="form-control " [(ngModel)] = "todoObj.Status" name="status">
+                <!-- <option selected>Open this select menu</option> -->
+                <option value="Active">Active</option>
+                <option value="Complete">Complete</option>
+                <option value="Pending">Pending</option>
+            </select>
+        </div>
+            
+          
+           <!-- <div class= "dates">
+            <label for="status" class="form-label">StartDate</label>
+            <input type="date" class="form-control" [(ngModel)] = "userObj.startDate" name="startDtae" >
+           </div>    -->
+        <button  type="button" (click)= "saveItem()" class="btn btn-primary btn-block">Submit</button>
+         <button  type="button" (click)= "updateItem()" class="btn btn-primary">Update</button> 
+        
+      </form>
+
+
+</div>
